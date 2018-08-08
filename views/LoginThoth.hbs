@@ -1,0 +1,54 @@
+<div align="center">
+    <h1 class="heading" style="font-size:800% ;">PeerTutor</h1>
+    <p id="x">
+        <form name="Info" action="/checkuser" method="POST" align="center">
+            <div class="content">
+
+                <H1 style="font-size:400%;">
+                    <STRONG>Login</STRONG>
+                </H1>
+                <br>
+                <h1 class="formfont">Email:</h1>
+                <br>
+                <input style="font-size:150%;" type="text" name="email" size="30" class="growboxinput" placeholder="Type Email" required>
+                <br>
+                <br>
+                <h1 class="formfont">Password:</h1>
+                <br>
+                <input type="password" style="font-size:150%;" name="password" size="30" class="growboxinput" placeholder="Type Password" required>
+                <br>
+                <br>
+
+                <br>
+                <br>
+                <button type="submit" class="growboxlogin btn margbottom">Login</button>
+
+        </form>
+    </p>
+    <script>
+        function form_validation() {
+            var email = document.forms.Info.email.value;
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            var Con = document.forms.Info.con.value;
+
+            var letters = /^[A-Za-z]+$/;
+
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please enter correct email ID!")
+                return false;
+            } else if (email == "") {
+                alert("Please fill in your email!")
+                return false;
+            }
+        }
+    </script>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> {{> footer}}
+</div>

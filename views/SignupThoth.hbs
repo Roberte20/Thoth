@@ -1,0 +1,106 @@
+<div align="center">
+    <h1 class="heading" style="font-size:800% ;">PeerTutor</h1>
+    <p id="x">
+        <form onsubmit="return form_validation()" action="/createAccount" method="POST" name="Info" align="center">
+            <div class="content">
+                <H3>User Name</H3>First Name :
+                <br>
+                <input type="text" class="growboxsignup " name="firstname" maxlength="15" required>
+                <br>Last Name :
+                <br>
+                <input type="text" class="growboxsignup" name="lastname" maxlength="15" required>
+                <br>
+                <H3>Phone Number</H3>
+                <input type="text" class="growboxsignup" name="phonenumber" required>
+                <br>
+                <H3>Login</H3>Email :
+                <br>
+                <input type="text" class="growboxsignup" name="email" required>
+                <br>Password :
+                <br>
+                <input type="password" class="growboxsignup" name="password" required>
+                <br>
+            
+                <br>
+
+                <h3>School:</h3>
+                <input type="text" class="growboxsignup" name="school" required>
+                <br>
+                <br>
+
+                <input type="radio" name="radio" value="tutor"> Tutor
+                <br>
+                <br>
+                <input type="radio" name="radio" value="student"> Student
+                <br>
+                <br>
+                <H3>If you are a tutor choose a subject</H3>
+                <h3>If student, select "none"</h3>
+                <select name="subject">
+                    <option value="None">None</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="Python">Python</option>
+                    <option value="Grammar">Grammar</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Language Arts">Language Arts</option>
+                    <option value="Algebra">Algebra</option>
+                    <option value="Geometry">Geometry</option>
+                    <option value="Calculus">Calculus</option>
+
+               
+                </select>
+                <br>
+                <br>
+                
+                <button type="submit" class="growbox btn margbottom">Register</button>
+            </div>
+            <br>
+        </form>
+    </p>
+    <script>
+        function form_validation() {
+            var FN = document.forms.Info.firstname.value;
+            var LN = document.forms.Info.lastname.value;
+            var PN = document.forms.Info.PhoneNumber.value;
+            var email = document.forms.Info.email.value;
+            var atpos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            var Con = document.forms.Info.con.value;
+            var Month = document.forms.Info.month.value;
+            var Day = document.forms.Info.day.value;
+            var Password = document.forms.Info.password.value;
+            var letters = /^[A-Za-z]+$/;
+            if (FN != "" && !FN.match(letters)) {
+                alert("Your first name has to be alphbet characters!") return false;
+            } else if (FN == "") {
+                alert("Please fill in your firstname!") return false;
+            }
+            if (LN != "" && !LN.match(letters)) {
+                alert("Your last name has to be alphbet characters!") return false;
+            } else if (LN == "") {
+                alert("Please fill in your lastname!") return false;
+            }
+            if (PN != "" && isNaN(PN) == true) {
+                alert("Your phone number has to be numbers!") return false;
+            } else if (PN == "") {
+                alert("Please fill in your phone number!") return false;
+            }
+            if (PN != "" && PN.length != 10) {
+                alert("Your phone number has to be exactly 10 digits!") return false;
+            }
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                alert("Please enter correct email ID!") return false;
+            } else if (email == "") {
+                alert("Please fill in your email!") return false;
+            }
+            if (Password == "") {
+                alert("Please fill in your email password!") return false;
+            }
+        }
+    </script> {{>footer}}
+
+</div>

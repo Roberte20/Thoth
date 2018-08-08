@@ -1,0 +1,171 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.growbox {
+    width: 20%;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: width .3s ease;
+    font-size: 28px;
+    box-shadow: 0 6px 8 px 0 rgba(0, 0, 0, 0.24), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(149, 220, 255);
+    color: rgb(91, 91, 92);
+}
+
+.growbox:focus {
+    width: 25%;
+}
+
+.growbox:hover {
+    width: 25%;
+}
+
+.growboxlogin {
+    width: 10%;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: width .3s ease;
+    font-size: 28px;
+    box-shadow: 0 6px 8 px 0 rgba(0, 0, 0, 0.24), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(149, 220, 255);
+    color: rgb(91, 91, 92);
+}
+
+.growboxlogin:hover {
+    width: 15%
+}
+
+.growboximg {
+    width: 20%;
+    border-color: black;
+    border-radius: 36px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    transition: width .7s ease;
+    font-size: 28px;
+    background-color: rgb(149, 220, 255);
+}
+
+.growboximg:hover {
+    width: 22.5%
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 30;
+}
+
+.heading {
+    width: 100%;
+    background: rgb(149, 220, 255);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: rgb(149, 220, 255);
+    padding-top: 25px;
+    padding-bottom: 0;
+    text-align:center;
+    
+}
+
+
+.canopy {
+    height: 40%;
+    width: 95%;
+    border: 7px solid #adadad;
+}
+
+.marginimg {
+    margin-right: 50px;
+}
+
+.padbottom {
+    margin-bottom: 50px;
+}
+
+.margbottom {
+    margin-bottom: 15px;
+}
+
+.formsize {
+    font-size: 100%
+}
+
+.growboxinput {
+    width: 20%;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: width .3s ease;
+    font-size: 28px;
+    box-shadow: 0 6px 8 px 0 rgba(0, 0, 0, 0.24), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.growboxinput:hover {
+    width: 25%
+}
+
+.growboxsignup {
+    width: 15%;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5x;
+    transition: width .3s ease;
+    font-size: 20px;
+    box-shadow: 0 6px 8 px 0 rgba(0, 0, 0, 0.24), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.growboxsignup:hover {
+    width: 20%
+}
+
+.growboxrequest {
+    width: 80%;
+    border-color: black;
+    border-radius: 25px;
+    border-width: 1px;
+    text-align: center;
+    transition: width .3s ease;
+    font-size: 20px;
+    box-shadow: 0 6px 8 px 0 rgba(0, 0, 0, 0.24), 0 6px 25px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(149, 220, 255);
+    color: rgb(91, 91, 92);
+}
+
+.growboxrequest:focus {
+    width: 90%;
+}
+
+.growboxrequest:hover {
+    width: 90%;
+}

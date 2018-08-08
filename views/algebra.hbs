@@ -1,0 +1,353 @@
+<style>
+	
+	.navbar {
+		position: fixed;
+		width: 100%;
+		height: 81px;
+		z-index: 1000;
+	}
+
+	ul {
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	.thoth {
+		font-size: 50px;
+		font-family: 'Montserrat', sans-serif;
+		float: left;
+		margin-left: 400px;
+	}
+
+	img {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		margin-top: 10px;
+		float: left;
+	}
+
+	.body {
+		background-color: #333333;
+	}
+
+	.carousel-content {
+		color: black;
+		display: flex;
+		align-items: center;
+	}
+
+	.carousel-slide {
+		margin-top: 100px;
+	}
+
+	#text-carousel {
+		width: 100%;
+		height: 200px;
+		padding: 50px;
+	}
+
+	.sidenav {
+    	height: 500px;
+    	width: 0;
+    	position: absolute;
+    	z-index: 1;
+    	top: 0;
+    	left: 0;
+    	background-color: #ffbc59;
+    	overflow-x: hidden;
+    	transition: 0.5s;
+    	padding-top: 60px;
+	}
+
+	.sidenav a {
+    	padding: 8px 8px 8px 32px;
+    	text-decoration: none;
+    	font-size: 25px;
+    	color: #ffffff;
+    	display: block;
+    	transition: 0.3s;
+	}
+
+	.sidenav .closebtn {
+    	position: absolute;
+    	top: 0;
+    	right: 25px;
+    	font-size: 36px;
+    	margin-left: 50px;
+	}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.open{
+	float : left;
+	margin-left : 10px;
+	margin-top : 20px;
+}
+
+.tutorProfile{
+	width : 30%;
+	float : left;
+	margin-top : 50px;
+	margin-left : 40px;
+	background-color : white;
+}
+</style>
+
+<nav class="navbar" style="background-color : rgb(149,220,255);">
+	<div class = "open">
+		<span style="font-size:20px; cursor:pointer" onclick="openNav();">&#9776; Student Profile</span>
+	</div>
+	<div class="thoth">
+		<span>Thoth</span>
+	</div>
+	{{!-- <div>
+		<img src="http://www.clker.com/cliparts/R/w/q/4/j/l/book.svg" alt="book">
+	</div> --}}
+	<div class="container-fluid">
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+					Math
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="/algebra">Algebra</a>
+					</li>
+					<li>
+						<a href="/Geometry">Geometry</a>
+					</li>
+					<li>
+						<a href="/Calculus">Calculus</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+					English
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="/Grammar">Grammar</a>
+					</li>
+					<li>
+						<a href="/Literature">Literature</a>
+					</li>
+					<li>
+						<a href="/LanguageArts">Language Arts</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+					Science
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="/Physics">Physics</a>
+					</li>
+					<li>
+						<a href="/Chemistry">Chemistry</a>
+					</li>
+					<li>
+						<a href="/Biology">Biology</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+					Computer Science
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="/Javascript">Javascript</a>
+					</li>
+					<li>
+						<a href="/HTML">HTML</a>
+					</li>
+					<li>
+						<a href="/Python">Python</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+
+<div id="text-carousel" class="carousel slide" data-ride="carousel">
+	<!-- Wrapper for slides -->
+	<div class="row">
+		<div class="col-xs-offset-3 col-xs-6">
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="carousel-content">
+						<div>
+							<p style="font-size: 20px">"Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing
+								that it is stupid."</p>
+							<p style="font-size: 20px" align="right">
+								<i>-Albert Einstein</i>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="carousel-content">
+						<div>
+							<p style="font-size: 20px">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
+							<p style="font-size: 20px" align="right">
+								<i>-Malcolm X</i>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="carousel-content">
+						<div>
+							<p style="font-size: 20px">Education is the most powerful weapon which you can use to change the world.</p>
+							<p style="font-size: 20px" align="right">
+								<i>-Nelson Mandela</i>
+								<br>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Controls -->
+
+	<a class="left carousel-control" href="#text-carousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#text-carousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<div style = "padding-left : 8px">
+	<h1 style = "font-color : white">Student Profile </h1>
+			<br>
+			<table style="font-family: 'Montserrat', sans-serif;">
+				<tr>
+					<td rowspan="5">
+
+					</td>
+					<td>
+						Name: {{student.firstname}} {{student.lastname}}
+						<br>
+						<br>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Email: {{student.email}}
+						<br>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Phone Number : {{student.phonenumber}}
+						<br>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Type: {{student.radio}}
+						<br>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/signout" method="post">
+						<input type = "submit" value = "Signout" class="growboxrequest btn" >
+						</form>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" align="right">
+
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	
+	{{#each tutors}}
+				{{!-- use index function to determine if even or odd number - if even number put to the left - if even put to the right --}}
+				{{!-- if index == 1  --}}
+				<table class = "tutorProfile">
+					<tr>
+						<td rowspan="4">
+							<img src="https://www.seafoodexpo.com/north-america/wp-content/uploads/sites/3/2017/11/a0C0H00001YtCxZUAV.png" alt="person picture"
+							    style="width:150px; height:150px" align="middle">
+						</td>
+						<td>
+							Name : {{this.firstname}} {{this.lastname}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Subject: {{this.subject}}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							School : {{this.school}}
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<br>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan = "2" align = "center" valign = "bottom">
+							<form action="/requesttutor" method="post">
+							<input type="text" hidden value="{{this.firstname}}" name="firstName">
+							<input type="text" hidden value="{{this.lastname}}" name="lastName">
+							<input type="text" hidden value="{{../student.firstname}}" name="stufirstName">
+							<input type="text" hidden value="{{../student.lastname}}" name="stulastName">
+							<input type="text" hidden value="{{../student.email}}" name="stuemail">
+							<br>
+							<input type = "submit" value = "Request Lesson" class="growboxrequest btn" >
+							</form>
+						</td>
+					</tr>
+				</table>		
+	{{/each}}	
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "300px";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0px";
+	}
+</script>

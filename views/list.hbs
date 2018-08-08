@@ -1,0 +1,12 @@
+<div align="center">
+    <h1 class="heading" style="font-size:800% ;">PeerTutor</h1>
+    <h1> List</h1>
+
+    {{#each studentList}}
+    <li>{{firstname}} {{lastname}} has phone number {{phonenumber}} email: {{email}} and type: {{radio}} </li>
+    {{/each}}
+    <a href="/home" class="growbox btn margbottom">Home</a>
+    <a href="/TutorHome" class="growbox btn margbottom">tutor</a>
+
+    {{>footer}}
+</div>
