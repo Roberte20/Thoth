@@ -317,7 +317,28 @@
 				<input hidden type="text" value="{{this.email}}" name="Email">
 				<input hidden type="text" value="{{../this.firstname}}" name="first">
 				<input hidden type="text" value="{{../this.lastname}}" name="last">
-					<button type="submit" class="btn btn-primary" id="btnDelteYes" value="Delete">Delete Card</button>
+				<div class="container">
+							
+					<input type="submit" id="btnDelteYes" value="Delete" data-toggle="modal" data-target="#myModal" class="growbox request btn">
+
+							<div class="modal fade" id="myModal" role="dialog">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Card is deleted</h4>
+										</div>
+										<div class="modal-body">
+											<p> Please refresh the page </p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
 			</div>
 
 
