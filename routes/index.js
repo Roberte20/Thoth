@@ -42,18 +42,21 @@ router.get('/TutorHome', function (req, res, next) {
 
       var collection = db.db('ThothDB').collection('accounts');
 
-      collection.find({"email":req.cookies.email
+      collection.find({
+        "email": req.cookies.email
       }).toArray(function (err, result) {
         if (err) {
           console.log(err);
         } else {
-          res.render('TutorHome', {
-            tutor: result
-            //"student": {email: req.cookies.email, password: req.cookies.password}
+
+          res.render('Tutorhome', {
+            tutor: result,
+            title: 'Home',
+            tutors: tutors,
           });
 
         }
-        //db.close();
+
       });
     }
   });
@@ -80,8 +83,6 @@ router.get('/home', function (req, res, next) {
         if (err) {
           console.log(err);
         } else {
-          // console.log(result[0].firstname);
-          // console.log(result[0].lastname)
 
           console.log(result);
           collection.find({
@@ -94,10 +95,9 @@ router.get('/home', function (req, res, next) {
               console.log(result);
 
               res.render('home', {
-                student : result[0],
+                student: result[0],
                 title: 'Home',
                 tutors: tutors,
-                //"student": {email: req.cookies.email, password: req.cookies.password}
               });
             }
 
@@ -222,7 +222,7 @@ router.post('/requesttutor', function (req, res) {
       console.log('tutor: ' + firstName, lastName)
       console.log('student: ' + stuFirst, stuLast)
       collection = db.db('ThothDB').collection('accounts');
-      
+
       collection.update({
         firstname: firstName,
         lastname: lastName
@@ -231,7 +231,7 @@ router.post('/requesttutor', function (req, res) {
           requests: {
             first: stuFirst,
             last: stuLast,
-            email : stuEmail
+            email: stuEmail
           }
         }
       }, {
@@ -264,8 +264,8 @@ router.post('/deletecard', function (req, res) {
       var lastName = req.body.last;
       var firstName = req.body.first;
       var email = req.body.Email;
-      console.log('tutor name:', firstName, lastName );
-      console.log('student email', email );
+      console.log('tutor name:', firstName, lastName);
+      console.log('student email', email);
       collection = db.db('ThothDB').collection('accounts');
 
       collection.update({
@@ -274,7 +274,7 @@ router.post('/deletecard', function (req, res) {
       }, {
         $pull: {
           requests: {
-            email : email
+            email: email
           }
         }
       }, {
@@ -294,7 +294,7 @@ router.post('/deletecard', function (req, res) {
 });
 
 
-router.post('/signout',function(req,res){
+router.post('/signout', function (req, res) {
   res.clearCookie("email");
   res.redirect('/');
 })
