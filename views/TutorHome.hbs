@@ -169,41 +169,53 @@
 	<div style = "padding-left : 8px">
 	<h1 style = "font-color : white">Signout </h1>
 			<br>
-			<table style="font-family: 'Montserrat', sans-serif;">
+			{{!-- <table style="font-family: 'Montserrat', sans-serif;">
 				<tr>
 					<td rowspan="5">
 
 					</td>
 					<td>
-						Name: {{this.firstname}} {{this.lastname}}
-						<br>
+						{{!-- Name: {{tutor.firstname}} {{tutor.lastname}} --}}
+						{{!-- <br>
 						<br>
 
 					</td>
 				</tr>
 				<tr>
-					<td>
-						Email: {{this.email}}
-						<br>
-						<br>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Phone Number : {{this.phonenumber}}
-						<br>
+					<td> --}}
+						{{!-- Email: {{tutor.email}} --}}
+						{{!-- <br>
 						<br>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						Type: {{this.radio}}
+						Phone Number : {{tutor.phonenumber}}
 						<br>
 						<br>
+					</td>
+				</tr>
+				<tr>
+					<td> --}}
+						{{!-- Type: {{tutor.radio}} --}}
+						{{!-- <br>
+						<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<form action="/signout" method="post">
+						<input type = "submit" value = "Signout" class="growboxrequest btn" >
+						</form>
 					</td>
 				</tr>
 
-			</table>
+				<tr>
+					<td colspan="2" align="right">
+
+					</td>
+				</tr>
+			</table>  --}}
 <form action="/signout" method="post">
 						<input type = "submit" value = "Signout" class="growboxrequest btn" >
 						</form>
