@@ -51,8 +51,7 @@ router.get('/TutorHome', function (req, res, next) {
 
           res.render('Tutorhome', {
             tutor: result,
-            title: 'Home',
-            tutors: tutors,
+          
           });
 
         }
